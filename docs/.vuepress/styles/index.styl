@@ -1,0 +1,38 @@
+/* Custom container for external links */
+.custom-block
+  .custom-block-title
+    font-weight 600
+    display flex
+  .custom-block-title::before
+    padding-right 0.5rem
+  &.note
+    padding .1rem 1.5rem
+    border-left-width .5rem
+    border-left-style solid
+    margin 1rem 0
+    border-radius 8px
+    background-color #e6f7ec
+    border-color #01a194
+    color #0c625b
+    & a
+      color inherit
+      text-decoration underline
+    & .custom-block-title
+      color #0f504a
+    & .custom-block-title::before
+      content url("/icon-notes.svg")
+  
+.fancy-link
+  display flex
+  color #0c625b
+  display inline-block
+  font-weight 600
+  & p
+    display inline-block
+
+.fancy-link::after
+  content "\2192"
+  position absolute
+  margin-left 8px
+  margin-top 20px
+  box-sizing inherit
